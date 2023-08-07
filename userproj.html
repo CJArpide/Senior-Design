@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            User Data
+        </title>
+        <meta charset = "utf-8">
+        <meta name = "viewport" content = "width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta http-equiv="refresh" content="17">
+        <link rel="stylesheet" href="style.css">
+        <script src="code.jquery.com_jquery-3.7.0.js"></script>
+
+        <script>
+            function Loop() {
+                var counter = 15;
+                var loopNum = 0
+                var Sec = "Seconds";
+                var myTimer = setInterval(function() {
+                    document.getElementById("testTimer").innerHTML = counter;
+                    counter--;
+                    if (counter < 0 ) {
+                        clearInterval(myTimer);
+                        document.getElementById("testTimer").style.color = "red";
+
+                        document.getElementById("cntnt01moduleform_1").submit();
+                    }
+                }, 1000);
+                loopNum ++;
+            }
+            Loop();
+        </script>
+    </head>
+
+    <body>
+        <input type="file" id="dataInput">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+        <script>
+
+        </script>
+
+        <div class="label">
+            Occupation Location
+        </div>
+        <div class="box">
+            Living Room
+        </div>
+
+        <div class="whiteSpace"></div>
+
+        <div class="container" id="container">
+            <div class="label">Heart Rate</div>
+            <div class="label">Temperature</div>
+            <div class="label">Motion</div>
+            <div class="item">BPM</div>
+            <div class="item">Fahrenheit</div>
+            <div class="item">Min:Sec</div>
+        </div>
+
+        <div class="whiteSpace"></div>
+
+        <div class="container" id="container">
+            <!--<div class="labelIter">Iteration</div>-->
+            <div class="labelIter">Next Loop</div>
+            <!--<div class="iteration", var="loopNum"></div>-->
+            <div class="iteration", id="testTimer"></div>
+        </div>
+
+        
+    </body>
+</html>
